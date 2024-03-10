@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sghumash <sghumash@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/10 14:43:00 by vacsargs          #+#    #+#             */
+/*   Updated: 2024/03/10 14:46:28 by sghumash         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "cube3d.h"
 
 void	get_tex_addr(t_data *c3d)
@@ -37,17 +49,17 @@ void	initorient_2(t_data *c3d)
 {
 	if (c3d->map->spawn_orient == 'S')
 	{
-	c3d->dirx = 1;
-	c3d->diry = 0;
-	c3d->planex = 0;
-	c3d->planey = -0.66;
+		c3d->dirx = 1;
+		c3d->diry = 0;
+		c3d->planex = 0;
+		c3d->planey = -0.66;
 	}
 	else if (c3d->map->spawn_orient == 'N')
 	{
-	c3d->dirx = -1;
-	c3d->diry = 0;
-	c3d->planex = 0;
-	c3d->planey = 0.66;
+		c3d->dirx = -1;
+		c3d->diry = 0;
+		c3d->planex = 0;
+		c3d->planey = 0.66;
 	}
 }
 
@@ -55,17 +67,17 @@ void	initorient(t_data *c3d)
 {
 	if (c3d->map->spawn_orient == 'W')
 	{
-	c3d->dirx = 0;
-	c3d->diry = -1;
-	c3d->planex = -0.66;
-	c3d->planey = 0;
+		c3d->dirx = 0;
+		c3d->diry = -1;
+		c3d->planex = -0.66;
+		c3d->planey = 0;
 	}
 	else if (c3d->map->spawn_orient == 'E')
 	{
-	c3d->dirx = 0;
-	c3d->diry = 1;
-	c3d->planex = 0.66;
-	c3d->planey = 0;
+		c3d->dirx = 0;
+		c3d->diry = 1;
+		c3d->planex = 0.66;
+		c3d->planey = 0;
 	}
 	else
 		initorient_2(c3d);
